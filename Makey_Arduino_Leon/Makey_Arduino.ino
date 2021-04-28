@@ -1,14 +1,16 @@
 //#include <Keyboard.h>
 
+#define TECLA 2
+
 void setup() {
-  pinMode(A0,INPUT);
+  pinMode(TECLA,INPUT);
   //Keyboard.begin();
   //delay(5000);
   Serial.begin(9600);
 }
 
 void loop() {
-  int tecla = analogRead(A0);
+  int tecla = digitalRead(TECLA);
   //if(tecla < 1000){
     //Serial.print("presionado");
     //Keyboard.press(KEY_RIGHT_GUI);
@@ -24,5 +26,5 @@ void loop() {
   //Keyboard.press('r');
   //delay(100);
   //Keyboard.releaseAll();  
-  //delay(1000);
+  delay(500);
 }
